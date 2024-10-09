@@ -1,0 +1,117 @@
+
+    .page-header {
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    background-color: @white;
+    border-bottom: 1px solid #e6eff5;
+    transition: box-shadow 0.2s;
+    &:hover {
+        box-shadow: 0 0 50px 0 @shadow;
+    }
+
+    &__container {
+        .container();
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        position: relative;
+        z-index: 1;
+        flex-shrink: 0;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        margin-top: 10px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    &__logo-desk {
+        color: @color--1;
+        font-family: @font2;
+        font-size: 25px;
+        font-weight: @font_weight6;
+    }
+    &__title {
+        margin: 0;
+        color: @color--1;
+        font-family: @font1;
+        font-size: 28px;
+        font-weight: @font_weight4;
+        line-height: 1.214;
+    }
+
+    &__right-block {
+        box-sizing: border-box;
+        display: flex;
+        gap: 30px;
+    }
+    &__nav {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+    &__link {
+        position: relative;
+        box-sizing: border-box;
+        display: inline-flex;
+        align-items: center;
+        height: 100%;
+        color: @color--1;
+        text-decoration: none;
+        cursor: pointer;
+    } 
+    &__link-svg {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        align-items:center ;
+        border-radius: 100%;
+        background-color: @color--2;
+    }
+    &__link-pic {
+        position: relative;
+        display: block;
+        margin: 0;
+        width: 60px;
+        text-decoration: none;
+        overflow: hidden;
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            padding-top: 100%;
+        }
+    }
+    &__link-img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+}
+
+.form-search {
+    &__input {
+        width: 255px;
+        height: 50px;
+        border-radius: 40px;
+        border: none;
+        background-color: @color--2;
+    }
+}
