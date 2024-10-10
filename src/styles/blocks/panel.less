@@ -6,6 +6,10 @@
     width: 100%;
     max-width: 250px;
 
+    @media @bw1340 {
+        display: none;
+    }
+
     &__container {
         display: flex;
         flex-direction: column;
@@ -71,7 +75,7 @@
     &__link {
         position: relative;
         box-sizing: border-box;
-        display: inline-flex;
+        display: flex;
         align-items: center;
         gap: 26px;
         width: 100%;
@@ -87,14 +91,29 @@
         cursor: pointer;
 
         &:hover {
-            width: 6px;
-            height: 60px;
-            border-radius: 0 10px 10px 0;
-            background: @color-hover;
             color: @color-hover;
             .panel__icon path {
                 fill: @color-hover;
             }
+            .panel__span {
+                transition: color 0.3s;
+                &:hover {
+                    color: @color-hover;
+                }
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 0;
+            border-radius: 0 10px 10px 0; 
+            background: @color-hover; 
+            transition: background 0.3s, height 0.3s, opacity 0.3s; 
         }
     }
     &__link-box {
@@ -110,4 +129,9 @@
             color: @color-hover;
         }
     }
+}
+
+.panel__link:hover::before {
+    height: 100%;
+    opacity: 1; 
 }

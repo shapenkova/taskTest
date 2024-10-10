@@ -2,7 +2,12 @@
 
 const root = document.documentElement;
 
-
+const jsSelectric = $(".js-selectric");
+if (jsSelectric.length) {
+        jsSelectric.selectric({
+        nativeOnMobile: false
+    });
+}
 
 // //Шапка сайта при скролле
 // document.addEventListener('scroll', function() {

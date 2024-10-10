@@ -1,5 +1,155 @@
 <section class="profile">
     <div class="profile__container">
-        
+        <nav class="profile__nav">
+            <a href="#" class="profile__nav-link">Edit Profile</a>
+            <a href="#" class="profile__nav-link">Preferences</a>
+            <a href="#" class="profile__nav-link">Security</a>
+        </nav>
+
+        <div class="profile__wrapper">
+            <div class="profile__box1">
+                <picture class="profile__pic">
+                    <img src="assets/images/img.jpg" alt="img" class="profile__img"/>                                                           
+                </picture>
+                <a href="#" class="profile__link">
+                    <svg class="profile__link-icon" width="15" height="15">
+                        <use xlink:href="assets/icons/symbols.svg#pencil"></use>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="profile__box2">
+                <form class="profile__form-edit form-edit" id="js-form-edit">
+                    <div class="form-edit__list">
+                        <div class="form-edit__block">
+                            <label class="field form-edit__field el1">
+                                <span class="field__label">Your Name</span>
+                                <input 
+                                    class="field__input" 
+                                    type="text" 
+                                    placeholder="Charlene Reed " 
+                                    name="name" 
+                                    required 
+                                />
+                            </label>
+
+                            <label class="field form-edit__field">
+                                <span class="field__label">User Name</span>
+                                <input 
+                                    class="field__input" 
+                                    type="text" 
+                                    placeholder="Charlene Reed " 
+                                    name="last_name" 
+                                    required
+                                />
+                            </label>
+                        </div>
+
+                        <div class="form-edit__block">
+                            <label class="field form-edit__field">
+                                <span class="field__label">Email</span>
+                                <input 
+                                    class="field__input" 
+                                    type="email" 
+                                    placeholder="charlenereed@gmail.com " 
+                                    name="phone" 
+                                    required 
+                                />
+                            </label>
+
+                            <label class="field form-edit__field">
+                                <span class="field__label">Password</span>
+                                <input 
+                                    class="field__input" 
+                                    type="password" 
+                                    placeholder="**********" 
+                                    name="password" 
+                                    required 
+                                />
+                            </label>
+                        </div>
+
+
+                        <div class="form-edit__block">
+                            <label class="field form-edit__field">
+                                <span class="field__label">Date of Birth</span>
+                                <select name="Date" class="field__select js-selectric">
+                                    <option value="">25 January 1990</option>
+                                    <option value="">26 January 1990</option>
+                                    <option value="">27 January 1990</option>
+                                </select>
+                            </label>
+
+                            <label class="field form-edit__fiel">
+                                <span class="field__label">Present Address</span>
+                                <input 
+                                    class="field__input" 
+                                    type="text" 
+                                    placeholder="San Jose, California, USA" 
+                                    name="Address" 
+                                    required 
+                                />
+                            </label>
+                        </div>
+                        
+
+                        <div class="form-edit__block">
+                            <label class="field form-edit__fiel">
+                                <span class="field__label">Permanent Address</span>
+                                <input 
+                                    class="field__input" 
+                                    type="text" 
+                                    placeholder="San Jose, California, USA" 
+                                    name="Address" 
+                                    required 
+                                />
+                            </label>
+
+                            <label class="field form-edit__fiel">
+                                <span class="field__label">City</span>
+                                <input 
+                                    class="field__input" 
+                                    type="text" 
+                                    placeholder="San Jose" 
+                                    name="city" 
+                                    required 
+                                />
+                            </label>
+                        </div>
+                        
+
+                        <div class="form-edit__block">
+                            <label class="field form-edit__fiel">
+                                <span class="field__label">Postal Code</span>
+                                <input 
+                                    class="field__input" 
+                                    type="text" 
+                                    placeholder="45962" 
+                                    name="Code" 
+                                    required 
+                                />
+                            </label>
+
+                            <label class="field form-edit__fiel">
+                                <span class="field__label">Country</span>
+                                <input 
+                                    class="field__input" 
+                                    type="text" 
+                                    placeholder="USA" 
+                                    name="Country" 
+                                    required 
+                                />
+                            </label>
+                        </div>
+                        
+
+                    </div>
+
+
+
+                    <button type="button" class="form-edit__btn">Save</button>
+                </form>
+            </div>
+        </div>
     </div>
 </section>
