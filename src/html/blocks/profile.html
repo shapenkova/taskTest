@@ -1,7 +1,7 @@
 <section class="profile">
     <div class="profile__container">
         <nav class="profile__nav">
-            <a href="#" class="profile__nav-link">Edit Profile</a>
+            <a href="#" class="profile__nav-link">Edit&nbsp;Profile</a>
             <a href="#" class="profile__nav-link">Preferences</a>
             <a href="#" class="profile__nav-link">Security</a>
         </nav>
@@ -9,6 +9,7 @@
         <div class="profile__wrapper">
             <div class="profile__box1">
                 <picture class="profile__pic">
+                    <source type="image/webp" srcset="assets/images/img.webp">
                     <img src="assets/images/img.jpg" alt="img" class="profile__img"/>                                                           
                 </picture>
                 <a href="#" class="profile__link">
@@ -22,7 +23,7 @@
                 <form class="profile__form-edit form-edit" id="js-form-edit">
                     <div class="form-edit__list">
                         <div class="form-edit__block">
-                            <label class="field form-edit__field el1">
+                            <label class="field form-edit__field">
                                 <span class="field__label">Your Name</span>
                                 <input 
                                     class="field__input" 
@@ -71,13 +72,15 @@
 
 
                         <div class="form-edit__block">
-                            <label class="field form-edit__field">
+                            <label class="field form-edit__field js-dateField">
                                 <span class="field__label">Date of Birth</span>
-                                <select name="Date" class="field__select js-selectric">
-                                    <option value="">25 January 1990</option>
-                                    <option value="">26 January 1990</option>
-                                    <option value="">27 January 1990</option>
-                                </select>
+                                <input
+                                    class="field__input js-dateDay"
+                                    id="js-dateDay1"
+                                    type="text"
+                                    placeholder="25 January 1990"
+                                    readonly
+                                />
                             </label>
 
                             <label class="field form-edit__fiel">

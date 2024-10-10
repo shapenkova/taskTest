@@ -26,7 +26,7 @@
             overflow: hidden;
         }
     }
-    .page-header__nav {
+    .profile {
         @media @bw1020 {
             transform: translateX(0);
         }
@@ -41,28 +41,9 @@
         }
     }
 }
-
-// .hidden {
-//     visibility: hidden;
-// }
-// .header-white {
-//     background-color: @white ;
-//     transition: background-color 0.2s;
-// }
-
-// .header-white .page-header__logo-link {
-//     color: @black;
-//     padding-left: 40px;
-// }
-
-// .active {
-//     &::before,
-//     &::after {
-//         background-color: @black;
-//     }
-// }
-// .arrow--disabled svg .hoverable-path {
-//     fill: @mid-grey;
-//     pointer-events: none; 
-//     cursor: not-allowed; 
-// }
+.panel.active {
+    display: block;
+    position: absolute;
+    max-width: 100%;
+    padding-top: 120px;
+}
