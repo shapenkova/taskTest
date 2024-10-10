@@ -1,7 +1,7 @@
 .panel {
-
+    position: relative;
     background-color: @white;
-    border-right: 1px solid #e6eff5;
+    border-right: 1px solid @color-line;
 	min-height: 100vh;
     width: 100%;
     max-width: 250px;
@@ -9,7 +9,7 @@
     &__container {
         display: flex;
         flex-direction: column;
-        gap: 51px;
+        gap: 39px;
     }
 
     &__logo {
@@ -25,10 +25,89 @@
         text-decoration: none;
         cursor: pointer;
     }
+    &__picture {
+        position: relative;
+        display: block;
+        width: 36px;
+        font-size: 0;
+        text-decoration: none;
+        overflow: hidden;
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            padding-top: 100%;
+        }
+    }
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
     &__logo-desk {
         color: @color--1;
         font-family: @font2;
         font-size: 25px;
         font-weight: @font_weight6;
+    }
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+    }
+    &__span {
+        margin: 0;
+        color: @color--4;
+        font-family: @font1;
+        font-size: 18px;
+        font-weight: @font_weight3;
+        line-height: 1.222;
+    }
+    &__link {
+        position: relative;
+        box-sizing: border-box;
+        display: inline-flex;
+        align-items: center;
+        gap: 26px;
+        width: 100%;
+        max-width: 250px;
+        height: 60px;
+        color: @color--4;
+        font-family: @font1;
+        font-size: 18px;
+        font-weight: @font_weight3;
+        line-height: 1.222;
+        text-decoration: none;
+        transition: color 0.2s;
+        cursor: pointer;
+
+        &:hover {
+            width: 6px;
+            height: 60px;
+            border-radius: 0 10px 10px 0;
+            background: @color-hover;
+            color: @color-hover;
+            .panel__icon path {
+                fill: @color-hover;
+            }
+        }
+    }
+    &__link-box {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        margin-left: 42px;
+        white-space: nowrap;
+    }
+    &__span {
+        transition: color 0.3s;
+        &:hover {
+            color: @color-hover;
+        }
     }
 }

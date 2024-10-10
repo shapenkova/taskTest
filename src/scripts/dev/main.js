@@ -2,6 +2,8 @@
 
 const root = document.documentElement;
 
+
+
 // //Шапка сайта при скролле
 // document.addEventListener('scroll', function() {
 //     let headerLink = document.querySelector('.page-header');
