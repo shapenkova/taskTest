@@ -24,14 +24,3 @@ $(document).ready(function() {
         $('#js-panel').toggleClass('active'); 
     });
 })
-
-
-$(document).ready(function() {
-    $("#password-mask").passwordify({
-        maxLength: 10,
-        numbersOnly: false,
-        alphaOnly: false,
-        alNumOnly: false
-    }).focus();
-});
-    
