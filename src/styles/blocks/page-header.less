@@ -6,10 +6,10 @@
     width: 100%;
     height: 100px;
     background-color: @white;
-    border-bottom: 1px solid #e6eff5;
+    border-bottom: 1px solid @color-line;
     transition: box-shadow 0.2s;
 
-    @media @bw1340 {
+    @media @bw1440 {
         height: 140px;
     }
     &:hover {
@@ -29,7 +29,7 @@
         grid-template-columns: 600px 1fr 1fr;
         grid-template-areas:
             'title form block';
-        @media @bw1340 {
+        @media @bw1440 {
             max-width: 100%;
             padding-left: 25px;
             padding-right: 25px;
@@ -52,7 +52,7 @@
         font-weight: @font_weight4;
         line-height: 1.214;
 
-        @media @bw1340 {
+        @media @bw768 {
             font-size: 20px;
             line-height: 1.2;
         }
@@ -63,7 +63,7 @@
         display: flex;
         grid-area: block;
         gap: 30px;
-        @media @bw1340 {
+        @media @bw1440 {
             gap: 0;
             justify-content: flex-end;
         }
@@ -71,7 +71,7 @@
     &__search-block {
         grid-area: form;
         margin-right: 30px;
-        @media @bw1340 {
+        @media @bw1440 {
             display: flex;
             margin: 0 auto;
             align-items: center;
@@ -103,7 +103,7 @@
         align-items:center ;  
         border-radius: 100%;
         background-color: @color--2;
-        @media @bw1340 {
+        @media @bw1440 {
             display: none;
         }
 
@@ -116,7 +116,7 @@
         text-decoration: none;
         overflow: hidden;
 
-        @media @bw1340 {
+        @media @bw768 {
             width: 35px;
         }
         &::after {
@@ -146,7 +146,7 @@
         }
 
 
-        @media @bw1340 {
+        @media @bw1440 {
             grid-area: toggle;
             position: relative;
             right: 10px;
@@ -190,7 +190,7 @@
     border: none;
     border-radius: 40px;
     background: @color--2;
-    @media @bw1340 {
+    @media @bw1440 {
         max-width: 100%;
     }
 }
@@ -200,7 +200,7 @@
     max-width: 255px;
     margin-top: 4px;
 
-    @media @bw1340 {
+    @media @bw1440 {
         max-width: 100%;
     }
 
@@ -214,12 +214,12 @@
             font-family: @font1;
             font-size: 15px;
             font-weight: @font_weight2;
-            @media @bw1340 {
+            @media @bw1440 {
                 font-size: 13px;
             }
         }
 
-        @media @bw1340 {
+        @media @bw1440 {
             width: 250px;
             height: 40px;
             padding: 0 5px 0 45px;
@@ -240,13 +240,13 @@
         top: 15px;
         left: 18px;
         cursor: pointer;
-        @media @bw1340 {
+        @media @bw1440 {
             top: 10px;
             left: 13px;
         }
     }
     &__icon {
-        @media @bw1340 {
+        @media @bw1440 {
             height: 16px;
             width: 16px;
         }

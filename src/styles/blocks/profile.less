@@ -59,7 +59,7 @@
         text-decoration: none;
         transition: color 0.2s;
         cursor: pointer;
-        @media @bw1340 {
+        @media @bw768 {
             max-width: 80px;
             font-size: 13px;
             line-height: 1.2;
@@ -187,7 +187,7 @@
     width: 100%;
     max-width: 865px;
     @media @bw1340 {
-        max-width: 325px;
+        max-width: 100%;
         padding: 0 20px;
     }
 
@@ -205,10 +205,12 @@
     &__block {
         display: flex;
         justify-content: space-between;
+        width: 100%;
         gap: 31px;
         @media @bw1340 {
             flex-wrap: wrap;
-            //width: 100%;
+            justify-content: center;
+            align-items: center;
             gap: 15px;
             
         }
@@ -235,11 +237,10 @@
 
         @media @bw1340 {
             width: 100%;
-            margin-top: 16px;
+            margin-top: 18px;
             padding: 11px 20px;
             border-radius: 9px;
             font-size: 15px;
-            
         }
         &:hover {
             background-color: @color--1;
@@ -294,30 +295,38 @@
 
     }
 }
-#js-dateDay1 {
+.js-dateField {
     position: relative;
-    display: inline-block;
     cursor: pointer; 
 }
 
-#js-dateDay1::after,
-#js-dateDay1::before {
+.js-dateField::after,
+.js-dateField::before {
     content: "";
     position: absolute;
-    top: 27px;
+    top: 53px;
     width: 8px;
     height: 2px;
-    background-color: black; /* измените на нужный цвет */
+    background-color: @color--5; 
     transition: transform 0.2s;
     z-index: 10;
+    @media @bw1340 {
+        top: 43px;
+    }
 }
 
-#js-dateDay1::after {
+.js-dateField::after {
     right: 22px;
     transform: rotate(-45deg);
+    @media @bw1340 {
+        right: 19px;
+    }
 }
 
-#js-dateDay1::before {
+.js-dateField::before {
     right: 27px;
     transform: rotate(45deg);
+    @media @bw1340 {
+        right: 23px;
+    }
 }

@@ -9,6 +9,13 @@
         <div class="profile__wrapper">
             <div class="profile__box1">
                 <picture class="profile__pic">
+                    <source 
+                    media="(max-width: 1339px)" 
+                    type="image/webp"  
+                    srcset="assets/images/img2.webp"
+                    />
+                    <source media="(max-width: 1339px)" srcset="assets/images/img2.jpg">
+
                     <source type="image/webp" srcset="assets/images/img.webp">
                     <img src="assets/images/img.jpg" alt="img" class="profile__img"/>                                                           
                 </picture>
@@ -53,7 +60,7 @@
                                     class="field__input" 
                                     type="email" 
                                     placeholder="charlenereed@gmail.com " 
-                                    name="phone" 
+                                    name="email"
                                     required 
                                 />
                             </label>
@@ -62,9 +69,11 @@
                                 <span class="field__label">Password</span>
                                 <input 
                                     class="field__input" 
+                                    id="password-mask"
                                     type="password" 
-                                    placeholder="**********" 
                                     name="password" 
+                                    autocomplete="current-password"
+                                    placeholder="**********" 
                                     required 
                                 />
                             </label>
@@ -75,8 +84,7 @@
                             <label class="field form-edit__field js-dateField">
                                 <span class="field__label">Date of Birth</span>
                                 <input
-                                    class="field__input js-dateDay"
-                                    id="js-dateDay1"
+                                    class="field__input js-dateDay "
                                     type="text"
                                     placeholder="25 January 1990"
                                     readonly
